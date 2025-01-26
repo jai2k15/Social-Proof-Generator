@@ -1,0 +1,14 @@
+{
+  "Shopify": {
+    "text": "{email} purchased items for ${number}"
+  },
+  "Stripe": {
+    "text": "Payment of ${number} received from {email}"
+  },
+  "Tiktok": {
+    "text": "{user} is following you on Tiktok!"
+  },
+  "Paypal": {
+    "text": "You received ${number} from {user}"
+  }
+}

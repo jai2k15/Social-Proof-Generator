@@ -1,0 +1,210 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:gravity="center_horizontal"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+        <TextView
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_full_name"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/notif_nav"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/dashboards"
+                android:layout_marginStart="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dashboard_nav"
+                android:textColor="@color/gray"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="19sp"
+            android:text="@string/notif_subtext" />
+
+        <TextView
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="Choose notifications templates" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <Spinner
+                android:id="@+id/spinnerTemplate"
+                android:layout_width="0dp"
+                android:layout_marginEnd="5dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/editButton"
+                android:background="@drawable/rounded_spinner"
+                android:elevation="4dp" />
+
+            <RelativeLayout
+                android:id="@+id/editButton"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:background="@drawable/roundcorner_edit_blue"
+                android:layout_alignParentEnd="true"
+                android:gravity="center"
+                android:layout_marginEnd="45dp"
+                android:elevation="4dp">
+
+                <ImageButton
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/edit"
+                    android:id="@+id/editButtonIcon"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:background="@drawable/roundcorner_edit_blue"
+                android:layout_alignParentEnd="true"
+                android:gravity="center"
+                android:elevation="4dp"
+                android:id="@+id/refreshButton">
+
+                <ImageButton
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/refresh"
+                    android:id="@+id/refreshButtonIcon"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Parameters"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:layout_marginTop="20dp"
+            android:id="@+id/editTextDelay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="🕒 Delay (seconds)"
+            android:background="@drawable/rounded_edittext"
+            android:padding="12dp"
+            android:elevation="4dp" />
+
+        <EditText
+            android:layout_marginTop="10dp"
+            android:id="@+id/editTextCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="🧮 Number of Notifications"
+            android:background="@drawable/rounded_edittext"
+            android:padding="12dp"
+            android:elevation="4dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/startTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""/>
+
+            <TextView
+                android:id="@+id/notifCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text=""/>
+
+            <TextView
+                android:id="@+id/preventMessage"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:text=""/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="45dp"
+        android:gravity="center"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:id="@+id/btnSchedule"
+            android:layout_width="265dp"
+            android:layout_height="55dp"
+            android:background="@drawable/roundcorner_button_blue"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:elevation="4dp">
+
+            <ImageView
+                android:id="@+id/ImgSchedule"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/notifon"/>
+
+            <TextView
+                android:id="@+id/TextSchedule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Send Notifications"
+                android:layout_marginStart="10dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

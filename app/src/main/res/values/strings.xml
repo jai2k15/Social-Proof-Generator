@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SPG</string>
+    <string name="notif_subtext">Send different types of fake notifications to yourself.\nMake people think you have value!</string>
+    <string name="dashboard_nav">📊 Dashboards</string>
+    <string name="notif_nav">🔔 Notifications</string>
+    <string name="app_full_name">Social Proof Generator</string>
+    <string name="template_subtext">Create you own Templates!\nUse {user | email | number} to generate random datas.</string>
+</resources>
